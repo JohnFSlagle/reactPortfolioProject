@@ -1,23 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import GameCard from "./GameCard";
+
+const gamesList = [
+  {
+    id: 0,
+    name: "Under Falling Skies",
+    rating: 8,
+    category: "space invaders",
+  },
+  {
+    id: 1,
+    name: "Final Girl",
+    rating: 9,
+    category: "slasher",
+  },
+  {
+    id: 2,
+    name: "Gloomhaven: Buttons and Bugs",
+    rating: 8,
+    category: "dungeon crawl",
+  },
+];
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>Best Solo Board Games</h1>
+      {gamesList.map(game => <GameCard game={game} /> ) }
     </div>
   );
 }
