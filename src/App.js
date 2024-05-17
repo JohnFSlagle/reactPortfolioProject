@@ -19,6 +19,12 @@ const gamesList = [
     rating: 8,
     category: "dungeon crawl",
   },
+  {
+    id: 3,
+    name: 'Warps Edge',
+    rating: 8,
+    category: 'science fiction'
+  }
 ];
 
 function App() {
