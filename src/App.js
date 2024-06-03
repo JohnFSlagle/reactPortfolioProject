@@ -5,6 +5,7 @@ import RandomPage from "./components/RandomPage";
 import { Link, Route, Routes } from "react-router-dom";
 import GamePage from "./components/GamePage";
 import { Button, Container, Nav, Navbar } from "react-bootstrap";
+import HomePageFirst from "./components/HomePageFirst";
 
 function App() {
   const [gamesList, setGamesList] = useState(Test_Games);
@@ -27,6 +28,9 @@ function App() {
           </Nav>
         </Container>
       </Navbar>
+
+      <HomePageFirst />
+
       <Container className="mt-4">
         <Routes>
           <Route
