@@ -6,7 +6,6 @@ import { Link, Route, Routes } from "react-router-dom";
 import GamePage from "./components/GamePage";
 import { Button, Container, Nav, Navbar } from "react-bootstrap";
 
-
 function App() {
   const [gamesList, setGamesList] = useState(Test_Games);
   const [categoryFilter, setCategoryFilter] = useState("All");
@@ -25,22 +24,30 @@ function App() {
             <Nav.Link as={Link} to="/random">
               Random
             </Nav.Link>
-            <Button variant="primary" onClick={() => setCategoryFilter("Solo")}>
-              Solo
-            </Button>
           </Nav>
         </Container>
       </Navbar>
-<Container className="mt-4">
-      <Routes>
-      <Route path="/" element={<HomePage gamesList={gamesList} setCategoryFilter={setCategoryFilter} />} />
+      <Container className="mt-4">
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <HomePage
+                gamesList={gamesList}
+                setCategoryFilter={setCategoryFilter}
+              />
+            }
+          />
 
-        <Route path="/random" element={<RandomPage gamesList={gamesList} />} />
-        <Route
-          path="/games/:gameId"
-          element={<GamePage gamesList={gamesList} />}
-        />
-      </Routes>
+          <Route
+            path="/random"
+            element={<RandomPage gamesList={gamesList} />}
+          />
+          <Route
+            path="/games/:gameId"
+            element={<GamePage gamesList={gamesList} />}
+          />
+        </Routes>
       </Container>
     </div>
   );

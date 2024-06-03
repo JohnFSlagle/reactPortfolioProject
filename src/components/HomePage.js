@@ -30,6 +30,12 @@ export default function HomePage({ gamesList, setCategoryFilter }) {
         >
           Family
         </button>
+        <button
+          className="btn btn-primary me-3"
+          onClick={() => handleCategoryFilterChange("Solo")}
+        >
+          Solo
+        </button>
       </div>
       {searchResults.length > 0 ? (
         <div>
