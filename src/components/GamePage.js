@@ -12,9 +12,10 @@ export default function GamePage({ gamesList }) {
 
   return (
     <div className="GamePageDetails">
+      <img src={game.imageUrl} alt={game.name} />
       <h1>{game.name}</h1>
-      <p>{game.category}</p>
-      <p>{game.rating}</p>
+      <p>Type: {game.category}</p>
+      <p>Rating: {game.rating}</p>
       <p>{game.summary}</p>
     </div>
   );
