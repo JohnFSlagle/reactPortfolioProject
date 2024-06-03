@@ -4,8 +4,8 @@ export default function RandomPage({ gamesList }) {
     const randomGame = gamesList[randomIndex]
     return (
         <div>
-            <h5>You should play...</h5>
-            <h2 className="display-1">{ randomGame.name }</h2>
+            <h2 className="RandomPageh5">You should play...</h2>
+            <h1 className="display1">{ randomGame.name }</h1>
         </div>
     )
 }

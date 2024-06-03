@@ -12,7 +12,7 @@ return <h2>Game Not Found</h2>
 
     return (
         <div>
-            <h3>{game.name}</h3>
+            <h1>{game.name}</h1>
             <p>{game.category}</p>
             <p>{game.rating}</p>
         </div>

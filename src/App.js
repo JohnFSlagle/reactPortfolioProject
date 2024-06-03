@@ -1,17 +1,19 @@
 import { useState } from "react";
 import HomePage from "./components/HomePage";
-import { Test_Games } from "./components/Test_Games";
+import { Test_Games } from "./components/AllGames";
 import RandomPage from "./components/RandomPage";
 import { Link, Route, Routes } from "react-router-dom";
 import GamePage from "./components/GamePage";
-import { Container, Nav, Navbar } from "react-bootstrap";
+import { Button, Container, Nav, Navbar } from "react-bootstrap";
+
 
 function App() {
   const [gamesList, setGamesList] = useState(Test_Games);
+  const [categoryFilter, setCategoryFilter] = useState("All");
 
   return (
     <div>
-      <Navbar bg="dark" data-bs-theme="dark">
+      <Navbar className="navbar">
         <Container>
           <Navbar.Brand as={Link} to="/">
             My Board Games
@@ -23,12 +25,16 @@ function App() {
             <Nav.Link as={Link} to="/random">
               Random
             </Nav.Link>
+            <Button variant="primary" onClick={() => setCategoryFilter("Solo")}>
+              Solo
+            </Button>
           </Nav>
         </Container>
       </Navbar>
 <Container className="mt-4">
       <Routes>
-        <Route path="/" element={<HomePage gamesList={gamesList} />} />
+      <Route path="/" element={<HomePage gamesList={gamesList} setCategoryFilter={setCategoryFilter} />} />
+
         <Route path="/random" element={<RandomPage gamesList={gamesList} />} />
         <Route
           path="/games/:gameId"

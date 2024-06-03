@@ -1,13 +1,41 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
+.navbar {
+  height: 60px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.navbar-brand {
+  color: rgb(9, 9, 9);
+}
+
+.btn {
+  background-color: red;
+  height: 30px;
+
+}
+
+.nav-link {
+  color: rgb(5, 5, 5);
+}
+
+.GameCardDiv {
+  color: rgb(10, 11, 11);
+  text-align: center;
+  
+}
+
+.RandomPageh5 {
+  color: rgb(6, 6, 6);
+}
+
+.display1 {
+  color:rgb(87, 68, 68)
+}
+
+.game-image {
+  width: 20%;
+  border-radius: 10px;
+}
+
+.GameDetails {
+  
 }

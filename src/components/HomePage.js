@@ -1,42 +1,49 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import GameCard from "./GameCard";
 
-export default function HomePage({ gamesList }) {
-  const [categoryFilter, setCategoryFilter] = useState("dungeon crawl");
-  let filteredGames;
-  if (categoryFilter === "All") {
-    filteredGames = gamesList;
-  } else {
-    filteredGames = gamesList.filter(
-      (game) => game.category === categoryFilter
-    );
-  }
+export default function HomePage({ gamesList, setCategoryFilter }) {
+  const [localCategoryFilter, setLocalCategoryFilter] = useState("All");
+  const [searchResults, setSearchResults] = useState([]);
+
+  const handleCategoryFilterChange = (category) => {
+    setLocalCategoryFilter(category);
+    setCategoryFilter(category);
+  };
+
+  const filteredGames =
+    localCategoryFilter === "All"
+      ? gamesList
+      : gamesList.filter((game) => game.category === localCategoryFilter);
+
   return (
     <div>
       <div>
         <button
           className="btn btn-primary me-3"
-          onClick={() => setCategoryFilter("All")}
+          onClick={() => handleCategoryFilterChange("All")}
         >
           All
         </button>
         <button
           className="btn btn-primary me-3"
-          onClick={() => setCategoryFilter("family")}
+          onClick={() => handleCategoryFilterChange("Family")}
         >
           Family
         </button>
-        <button
-          className="btn btn-primary"
-          onClick={() => setCategoryFilter("solo")}
-        >
-          Best Solo
-        </button>{" "}
-        {/* I need to fix  this*/}
       </div>
-      {filteredGames.map((game) => (
-        <GameCard key={game.id} game={game} />
-      ))}
+      {searchResults.length > 0 ? (
+        <div>
+          {searchResults.map((game) => (
+            <GameCard key={game.id} game={game} />
+          ))}
+        </div>
+      ) : (
+        <div>
+          {filteredGames.map((game) => (
+            <GameCard key={game.id} game={game} />
+          ))}
+        </div>
+      )}
     </div>
   );
 }
