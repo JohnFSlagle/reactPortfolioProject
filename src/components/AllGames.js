@@ -153,4 +153,37 @@ export const Test_Games = [
       "https://cf.geekdo-images.com/-19XPXmTn9QyyvqwpcFkBw__imagepage/img/vjX_WFkkpegt2ccx5NUUX7XqYZ0=/fit-in/900x600/filters:no_upscale():strip_icc()/pic5231006.jpg",
   summary: `In Marvel United you take the role of iconic Marvel Heroes cooperating to stop the master plan of a powerful Villain controlled by the game. Each Villain unveils their unique master plan, with cards that trigger different effects, and threats that pose challenges across the locations. Heroes must choose carefully the cards to play from their unique decks, that not only offer different actions and superpowers to use, but also combine with the actions of other Heroes to do the impossible. Build your storyline, unite your powers, save the day!`
     },
+    {
+    id: 11,
+    name: "Dragonwood",
+    rating: 9,
+    category: "Family",
+    age: 6,
+    imageUrl:
+    "https://cf.geekdo-images.com/npY6grU545xPiRkCAmcdSA__imagepage/img/owJvZs9Onr6Q2S-E748F2zKfwZU=/fit-in/900x600/filters:no_upscale():strip_icc()/pic2401338.jpg",
+  summary: `Dare to enter Dragonwood! Deep in the heart of this mythical forest lurk angry ogres, giggling goblins, and even the famed and fearsome fire-breathers themselves!
+
+  In Dragonwood, you collect sets of adventurer cards to earn dice, which you then use to roll against your foes. Stomp on some fire ants, scream at a grumpy troll, or strike the menacing orange dragon with a magical silver sword. Choose your strategy carefully because the landscape of Dragonwood is ever-changing. Only the bravest will overcome the odds to emerge victorious!
+  
+  Gameplay:
+  
+  On their turn, players either draw a card or attempt to capture a creature or enhancement. Players draw from the Adventurer deck that contains cards of 5 different colors all numbered 1-12. With these cards players form combinations to attempt a Strike (cards in a row of any color), a Stomp (cards of the same number) or a Scream (cards of the same color). To capture, players roll a number of dice equal to the number of cards they have of the particular combination. Each creature has different minimum values of a Strike, Stomp or Scream needed to capture it, and a Victory Point amount.
+  
+  The game includes six, six-sided dice with sides 1, 2, 2, 3, 3, and 4 to reduce extremely lucky outcomes. The Dragonwood deck has 42 cards, 5 of which are displayed in the landscape at any time. In addition to creatures, this deck also has enhancements that are captured in the same way as creatures which assist players in capturing creatures, and contains events that also impact play. When both dragons have been defeated, the game is over and the player with the most victory points wins!
+  
+  Is the best strategy to go for several smaller creatures or save up for larger attacks? Should you grab some enhancements hoping they will pay off, or go immediately for creatures? Do you take chances on some rolls or go for sure things? Every time you play Dragonwood the deck is different, so no two games are the same!`,  
+  },
+  {
+    id: 12,
+    name: 'Pokemon TCG',
+    rating: 3,
+    category: 'Family',
+    age: 6,
+    imageUrl: "https://cf.geekdo-images.com/aV-WNVfOd-L6cUTPd529-w__imagepage/img/mYbP9VbnKW6ER1q8yXl2ySX3lB0=/fit-in/900x600/filters:no_upscale():strip_icc()/pic6792682.jpg",
+  summary: `Enjoy the thrill of battling right out the gate with the latest version of the ready-to-play Pokémon Trading Card Game Battle Academy! Updated with fun new decks and cards, this version contains everything that two players need to charge headlong into battle, along with guides to the decks so your first game is easy to follow.
+
+  Choose between fiery, feisty Cinderace or electrifyingly engaging Pikachu to lead your team in a heads-up battle against another Trainer. Then, switch up the decks to play adorable Eevee against Cinderace or Pikachu, and lead a different team of Pokémon into the arena!
+  
+  With a little strategy, a little luck, and the contents of this incredible box, you can battle with the best and have a blast while doing it. Best of all, this latest version of the Battle Academy is fully compatible with other Pokémon TCG products, including the first Battle Academy.`,
+  }
 ];
