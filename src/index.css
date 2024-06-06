@@ -20,6 +20,9 @@
   text-align: center;
   margin-top: 50px;
   margin-bottom: 50px;
+  font-weight: 800;
+  font-family: cursive;
+  
 }
 
 .RandomPageh5 {
@@ -50,6 +53,7 @@
 
 .FirstDivH1 {
   font-size: 6em;
+  font-weight: 900;
 }
 
 .FirstDivP {
@@ -66,4 +70,15 @@
   border-radius: 20px;
   padding: 80px;
   background-size: cover;
+}
+
+.FavoriteGame {
+  text-align: center;
+ 
+  background-color: rgb(32, 30, 30);
+  font-family: cursive;
+  
+  padding: 80px;
+  background-size: cover;
+  color: aliceblue;
 }

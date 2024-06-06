@@ -6,6 +6,7 @@ import { Link, Route, Routes } from "react-router-dom";
 import GamePage from "./components/GamePage";
 import { Button, Container, Nav, Navbar } from "react-bootstrap";
 import HomePageFirst from "./components/HomePageFirst";
+import FavoriteGame from "./components/FavoriteGame";
 
 function App() {
   const [gamesList, setGamesList] = useState(Test_Games);
@@ -53,8 +54,14 @@ function App() {
           />
         </Routes>
       </Container>
+
+      <FavoriteGame />
+
     </div>
   );
+
+
+
 }
 
 export default App;

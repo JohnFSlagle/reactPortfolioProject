@@ -37,19 +37,16 @@ export default function HomePage({ gamesList, setCategoryFilter }) {
           Solo
         </button>
       </div>
-      {searchResults.length > 0 ? (
-        <div>
-          {searchResults.map((game) => (
-            <GameCard key={game.id} game={game} />
-          ))}
-        </div>
-      ) : (
-        <div>
-          {filteredGames.map((game) => (
-            <GameCard key={game.id} game={game} />
-          ))}
-        </div>
-      )}
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fill)",
+        }}
+      >
+        {searchResults.length > 0
+          ? searchResults.map((game) => <GameCard key={game.id} game={game} />)
+          : filteredGames.map((game) => <GameCard key={game.id} game={game} />)}
+      </div>
     </div>
   );
 }
