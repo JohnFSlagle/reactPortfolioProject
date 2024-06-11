@@ -7,6 +7,7 @@ import GamePage from "./components/GamePage";
 import { Button, Container, Nav, Navbar } from "react-bootstrap";
 import HomePageFirst from "./components/HomePageFirst";
 import FavoriteGame from "./components/FavoriteGame";
+import Footer from "./components/Footer";
 
 function App() {
   const [gamesList, setGamesList] = useState(Test_Games);
@@ -56,12 +57,10 @@ function App() {
       </Container>
 
       <FavoriteGame />
-
+      <Footer/>
     </div>
   );
-
-
-
+ 
 }
 
 export default App;
