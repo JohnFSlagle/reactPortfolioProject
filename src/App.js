@@ -1,13 +1,14 @@
 import { useState } from "react";
-import HomePage from "./components/HomePage";
+import HomePage from "./pages/HomePage";
 import { Test_Games } from "./components/AllGames";
-import RandomPage from "./components/RandomPage";
+import RandomPage from "./pages/RandomPage";
 import { Link, Route, Routes } from "react-router-dom";
-import GamePage from "./components/GamePage";
+import GamePage from './components/GamePage';
 import { Button, Container, Nav, Navbar } from "react-bootstrap";
-import HomePageFirst from "./components/HomePageFirst";
+import HomePageFirst from "./components/HomePageFirstDiv";
 import FavoriteGame from "./components/FavoriteGame";
 import Footer from "./components/Footer";
+import ThreeSteps from "./components/ThreeSteps";
 
 function App() {
   const [gamesList, setGamesList] = useState(Test_Games);
@@ -32,6 +33,7 @@ function App() {
       </Navbar>
 
       <HomePageFirst />
+      <ThreeSteps />
 
       <Container className="mt-4">
         <Routes>
@@ -57,10 +59,9 @@ function App() {
       </Container>
 
       <FavoriteGame />
-      <Footer/>
+      <Footer />
     </div>
   );
- 
 }
 
 export default App;

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import GameCard from "./GameCard";
+import GameCard from "../components/GameCard";
 
 export default function HomePage({ gamesList, setCategoryFilter }) {
   const [localCategoryFilter, setLocalCategoryFilter] = useState("All");

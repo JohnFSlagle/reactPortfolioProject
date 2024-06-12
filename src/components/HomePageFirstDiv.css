@@ -1,0 +1,22 @@
+.HomePageFirstDiv {
+    text-align: center;
+    margin-top: 10px;
+    margin-left: 60px;
+    margin-right: 60px;
+    margin-bottom: 10px;
+    background-image: url('/public/images/anotherbackground.webp');
+    font-family: cursive;
+    border-radius: 20px;
+    padding: 80px;
+    background-size: cover;
+  }
+  
+  .FirstDivH1 {
+    font-size: 6em;
+    font-weight: 900;
+  }
+  
+  .FirstDivP {
+    font-size: 3em;
+  }
+  

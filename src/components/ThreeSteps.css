@@ -1,0 +1,25 @@
+.ThreeStepsContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.TS1,
+.TS2,
+.TS3 {
+  flex: 1;
+  padding: 40px;
+}
+
+.ThreeStepsHeading {
+  text-align: center;
+  font-family: cursive;
+  font-size: 60px;
+  font-weight: 800;
+  padding: 50px;
+}
+
+.threeStepsP {
+  text-align: center;
+}

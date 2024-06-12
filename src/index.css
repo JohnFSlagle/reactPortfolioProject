@@ -6,7 +6,6 @@
   color: rgb(9, 9, 9);
 }
 
-
 .nav-link {
   color: rgb(5, 5, 5);
 }
@@ -18,7 +17,6 @@
   margin-bottom: 50px;
   font-weight: 800;
   font-family: cursive;
-  
 }
 
 .RandomPageh5 {
@@ -32,28 +30,6 @@
 .game-image {
   width: 20%;
   border-radius: 10px;
-}
-
-.HomePageFirstDiv {
-  text-align: center;
-  margin-top: 10px;
-  margin-left: 60px;
-  margin-right: 60px;
-  margin-bottom: 10px;
-  background-image: url(./images/anotherbackground.webp);
-  font-family: cursive;
-  border-radius: 20px;
-  padding: 80px;
-  background-size: cover;
-}
-
-.FirstDivH1 {
-  font-size: 6em;
-  font-weight: 900;
-}
-
-.FirstDivP {
-  font-size: 3em;
 }
 
 .GamePageDetails {
@@ -70,10 +46,10 @@
 
 .FavoriteGame {
   text-align: center;
- 
+
   background-color: rgb(32, 30, 30);
   font-family: cursive;
-  
+
   padding: 80px;
   background-size: cover;
   color: aliceblue;

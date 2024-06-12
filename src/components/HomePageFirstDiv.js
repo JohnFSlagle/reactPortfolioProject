@@ -1,4 +1,6 @@
 import { Container } from "react-bootstrap";
+import './HomePageFirstDiv.css';
+
 
 function HomePageFirst() {
   return (
