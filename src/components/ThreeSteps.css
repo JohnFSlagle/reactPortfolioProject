@@ -22,4 +22,10 @@
 
 .threeStepsP {
   text-align: center;
+  font-family: cursive;
+}
+
+.threeStepsH {
+    font-family: cursive;
+    font-weight: 600;
 }

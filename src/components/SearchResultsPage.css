@@ -1,0 +1,16 @@
+.SearchResultsH1 {
+    text-align: center;
+    font-size: 6em;
+    font-weight: 500;
+    font-family: cursive;
+}
+
+.noResultsMessage {
+    text-align: center;
+    font-size: 4em;
+    font-weight: 500;
+    font-family: cursive;
+    margin-top: 5%;
+    margin-bottom: 10%;
+    
+}

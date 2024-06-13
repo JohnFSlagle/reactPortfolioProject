@@ -1,37 +1,52 @@
 import { Container, Row, Col } from "reactstrap";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import { FaFacebook, FaPhone, FaEnvelope, FaArrowUp } from 'react-icons/fa';
 
 const Footer = () => {
+  const location = useLocation();
+  const isSearchResultsPage = location.pathname === '/search-results';
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
-    <footer className="site-footer">
+    <footer className="site-footer bg-dark text-white py-5">
       <Container>
-        <Row>
-          <Col xs={{ size: 4, offset: 1 }} sm="2">
-            <h5>Links</h5>
+        <Row className="text-center">
+          <Col xs={12} md={4} className="mb-4">
+            <h5 className="footer-heading">Links</h5>
             <ul className="list-unstyled">
-              <li>
-                <Link to="/">Home</Link>
+              <li className="mb-2">
+                <Link to="/" className="footer-link text-white">Home</Link>
               </li>
+              {!isSearchResultsPage && (
+                <li className="mb-2">
+                  <button className="btn btn-link text-white" onClick={scrollToTop}>
+                    <FaArrowUp className="mr-1" /> Back to Top
+                  </button>
+                </li>
+              )}
             </ul>
           </Col>
-          <Col xs="6" sm="3" className="text-center">
-            <h5>Social</h5>
-
-            <a className="btn btn-link" href="http://www.facebook.com/">
-              <p>Facebook</p>
+          <Col xs={12} md={4} className="mb-4">
+            <h5 className="footer-heading">Social</h5>
+            <a className="btn btn-link text-white" href="http://www.facebook.com/">
+              <FaFacebook className="mr-1" /> Facebook
             </a>
           </Col>
-          <Col sm="4" className="text-center">
-            <a role="button" className="btn btn-link" href="tel:+9728359634">
-              <i className="fa fa-phone" /> (972) 835-9634
+          <Col xs={12} md={4} className="mb-4">
+            <h5 className="footer-heading">Contact</h5>
+            <a role="button" className="btn btn-link text-white" href="tel:+9728359634">
+              <FaPhone className="mr-1" /> (972) 835-9634
             </a>
             <br />
             <a
               role="button"
-              className="btn btn-link"
-              href="www.johnfslagle@gmail.com"
+              className="btn btn-link text-white"
+              href="mailto:johnfslagle@gmail.com"
             >
-              <i className="fa fa-envelope-o" /> Johnfslagle@gmail.com
+              <FaEnvelope className="mr-1" /> johnfslagle@gmail.com
             </a>
           </Col>
         </Row>

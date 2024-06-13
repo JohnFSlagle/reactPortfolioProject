@@ -10,7 +10,7 @@ function GameCard({ game }) {
           className="game-image"
         />
       </div>
-      <h1>{game.name}</h1>
+      <h1 className="GameName">{game.name}</h1>
       <h3>Type: {game.category}</h3>
       <h4>My Rating: {game.rating}</h4>
 

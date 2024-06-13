@@ -40,7 +40,8 @@ export default function HomePage({ gamesList, setCategoryFilter }) {
       <div
         style={{
           display: "grid",
-          gridTemplateColumns: "repeat(auto-fill)",
+          gridTemplateColumns: "repeat(2, minmax(0, 1fr))",
+          gap: "20px",
         }}
       >
         {searchResults.length > 0

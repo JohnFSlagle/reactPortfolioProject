@@ -2,17 +2,32 @@ import { useState } from "react";
 import HomePage from "./pages/HomePage";
 import { Test_Games } from "./components/AllGames";
 import RandomPage from "./pages/RandomPage";
-import { Link, Route, Routes } from "react-router-dom";
-import GamePage from './components/GamePage';
+import { Link, Route, Routes, useNavigate } from "react-router-dom";
+import GamePage from "./components/GamePage";
 import { Button, Container, Nav, Navbar } from "react-bootstrap";
-import HomePageFirst from "./components/HomePageFirstDiv";
+import HomePageFirstDiv from "./components/HomePageFirstDiv";
 import FavoriteGame from "./components/FavoriteGame";
 import Footer from "./components/Footer";
 import ThreeSteps from "./components/ThreeSteps";
+import SearchBar from "./components/SearchBar";
+import SearchResultsPage from "./components/SearchResultsPage";
 
 function App() {
   const [gamesList, setGamesList] = useState(Test_Games);
   const [categoryFilter, setCategoryFilter] = useState("All");
+  const [searchResults, setSearchResults] = useState([]);
+  const navigate = useNavigate();
+
+  const handleSearch = (searchQuery) => {
+    const results = gamesList.filter(
+      (game) =>
+        game.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        game.category.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        game.rating.toString().includes(searchQuery.toLowerCase())
+    );
+    setSearchResults(results);
+    navigate('/search-results');
+  };
 
   return (
     <div>
@@ -29,10 +44,13 @@ function App() {
               Random
             </Nav.Link>
           </Nav>
+
+          <SearchBar onSearch={handleSearch} />
         </Container>
       </Navbar>
 
-      <HomePageFirst />
+      <HomePageFirstDiv />
+
       <ThreeSteps />
 
       <Container className="mt-4">
@@ -46,7 +64,6 @@ function App() {
               />
             }
           />
-
           <Route
             path="/random"
             element={<RandomPage gamesList={gamesList} />}
@@ -54,6 +71,10 @@ function App() {
           <Route
             path="/games/:gameId"
             element={<GamePage gamesList={gamesList} />}
+          />
+          <Route
+            path="/search-results"
+            element={<SearchResultsPage searchResults={searchResults} />}
           />
         </Routes>
       </Container>
