@@ -19,14 +19,6 @@
   font-family: cursive;
 }
 
-.RandomPageh5 {
-  color: rgb(6, 6, 6);
-}
-
-.display1 {
-  color: rgb(87, 68, 68);
-}
-
 .game-image {
   width: 60%;
   border-radius: 10px;
@@ -42,7 +34,6 @@
   border-radius: 20px;
   padding: 80px;
   background-size: cover;
-  
 }
 
 .FavoriteGame {

@@ -1,0 +1,34 @@
+.RandomPageh5 {
+    text-align: center;
+    font-family: cursive;
+    font-size: 50px;
+    font-weight: 600;
+    padding: 50px;
+    
+  }
+
+  .display1 {
+    text-align: center;
+    font-family: cursive;
+    font-size: 80px;
+    font-weight: 600;
+    padding: 50px;
+  }
+
+  .random-game-image {
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10%;
+    margin-left: 23%;
+  }
+
+  .randomDiv {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; /* Stacks children vertically */
+    height: 100vh; /* Optional: Centers content vertically within the full viewport height */
+    text-align: center; /* Ensures text is centered */
+  }
+  

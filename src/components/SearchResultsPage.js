@@ -6,7 +6,7 @@ import "./SearchResultsPage.css";
 function SearchResultsPage({ searchResults }) {
   useEffect(() => {
     window.scrollTo(0, 1200);
-  }, [searchResults]); // Run only once after the component is mounted
+  }, [searchResults]); 
 
   return (
     <div>
